@@ -32,6 +32,21 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: #ffffff;
+  // Add padding for iOS safe areas
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.header-wrapper {
+  padding-top: max(10px, env(safe-area-inset-top));
+  padding-left: max(30px, env(safe-area-inset-left));
+  padding-right: max(30px, env(safe-area-inset-right));
+}
+
+// Add for bottom fixed elements
+.footer {
+  padding-bottom: max(30px, env(safe-area-inset-bottom));
 }
 
 * {
