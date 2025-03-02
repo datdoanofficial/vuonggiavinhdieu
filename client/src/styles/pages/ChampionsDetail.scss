@@ -1,0 +1,29 @@
+@import "../../styles/common/root.scss";
+
+.champions-detail {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .background-img {
+    width: 100%;
+    height: 85vh;
+    background-image: url("../../assets/images/champions/thumb/champion-01.webp");
+    background-size: cover;
+    animation: bg-animate 0.5s linear;
+  }
+
+  @keyframes bg-animate {
+    0% {
+      transform: translateY(-0.6rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

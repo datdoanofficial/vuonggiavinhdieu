@@ -1,0 +1,136 @@
+@import "../../styles/common/root.scss";
+
+// iconify
+
+.lets-icons--search-light {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000'%3E%3Ccircle cx='11' cy='11' r='6'/%3E%3Cpath stroke-linecap='round' d='m20 20l-3-3'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+// Search Box
+
+.searchBox {
+  width: 600px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 0;
+  border-radius: 50px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-left: 20px;
+      color: $text-color;
+      font-size: 40px;
+    }
+  }
+
+  input {
+    height: 100%;
+    width: 85%;
+    color: $text-color;
+    font-size: 18px;
+    padding: 0 20px;
+    font-family: $quicksand;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  input::placeholder {
+    color: $text-placeholder;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchBox {
+    width: 24rem;
+    height: 60px;
+
+    input {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .searchBox {
+    width: 22rem;
+
+    input {
+      padding: 0 15px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .searchBox {
+    width: 22rem;
+    height: 60px;
+
+    .icon {
+      span {
+        margin-left: 20px;
+      }
+    }
+
+    input {
+      padding: 0 15px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searchBox {
+    width: 19rem;
+    height: 54px;
+
+    .icon {
+      span {
+        margin-left: 15px;
+      }
+    }
+
+    input {
+      padding: 0 10px;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .searchBox {
+    width: 18rem;
+    height: 50px;
+
+    .icon {
+      span {
+        margin-left: 15px;
+        font-size: 30px;
+      }
+    }
+
+    input {
+      padding: 0 10px 0 5px;
+      font-size: 0.75rem;
+    }
+  }
+}

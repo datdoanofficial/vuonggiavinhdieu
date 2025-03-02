@@ -1,0 +1,238 @@
+@import "../../styles/common/root.scss";
+
+.news-wrapper {
+  margin-top: 3rem;
+  width: fit-content;
+
+  .title {
+    font-family: $quicksand;
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  .all-banner {
+    margin-top: 40px;
+    display: flex;
+    height: 100%;
+
+    .large-banner {
+      position: relative;
+      width: 670px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      margin-right: 20px;
+      border-radius: 10px;
+      transition: 0.5s;
+
+      .text-in-banner {
+        position: absolute;
+        bottom: 0;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+        font-family: $darker-grotesque;
+        width: 85%;
+        height: 50px;
+        color: #fff;
+        border-top: 1px solid rgba(#dcdcdc, 0.2);
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .mini-banner {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 265px);
+      gap: 20px;
+      height: 100%;
+      border-radius: 10px;
+      transition: 0.5s;
+
+      .mini-banner-item {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+
+      .text-in-banner {
+        position: relative;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+        font-family: $darker-grotesque;
+        width: 85%;
+        height: 36px;
+        color: #fff;
+        border-top: 1px solid rgba(#dcdcdc, 0.2);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .news-wrapper {
+    .all-banner {
+      .large-banner {
+        width: 645px;
+      }
+
+      .mini-banner {
+        grid-template-columns: repeat(2, 255px);
+
+        .mini-banner-item {
+          height: 144px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .news-wrapper {
+    .all-banner {
+      .large-banner {
+        width: 611px;
+      }
+
+      .mini-banner {
+        grid-template-columns: repeat(2, 240px);
+
+        .mini-banner-item {
+          height: 136px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .news-wrapper {
+    .all-banner {
+      .large-banner {
+        width: 565px;
+      }
+
+      .mini-banner {
+        grid-template-columns: repeat(2, 220px);
+
+        .mini-banner-item {
+          height: 125px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .news-wrapper {
+    .all-banner {
+      .large-banner {
+        width: 528px;
+      }
+
+      .mini-banner {
+        grid-template-columns: repeat(2, 205px);
+
+        .mini-banner-item {
+          height: 116px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news-wrapper {
+    width: calc(100% - 6rem);
+
+    .all-banner {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-size: 26px;
+      }
+
+      .large-banner {
+        width: 100%;
+      }
+
+      .mini-banner {
+        margin-top: 1rem;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .mini-banner-item {
+          height: 100%;
+          aspect-ratio: 1.765;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-wrapper {
+    width: calc(100% - 4rem);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .news-wrapper {
+    width: calc(100% - 3rem);
+
+    .all-banner {
+      .mini-banner {
+        margin-top: 15px;
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news-wrapper {
+    width: calc(100% - 3rem);
+
+    .all-banner {
+      margin-top: 30px;
+
+      .large-banner {
+        height: 100%;
+        aspect-ratio: 1.765;
+      }
+
+      .mini-banner {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .news-wrapper {
+    width: calc(100% - 2rem);
+  }
+}

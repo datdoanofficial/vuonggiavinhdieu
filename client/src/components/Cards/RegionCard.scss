@@ -1,0 +1,211 @@
+@import "../../styles/common/root.scss";
+
+.region-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #2a2a2a;
+  mask-image: linear-gradient(135deg, transparent 15px, #000 0);
+
+  .region {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #2a2a2a;
+    mask-image: linear-gradient(135deg, transparent 15px, #000 0);
+  }
+
+  .region:hover::after,
+  .region:hover::before {
+    display: block;
+    transition: 0.5s ease;
+  }
+
+  .region::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(62deg);
+    content: "";
+    width: 30%;
+    height: 480px;
+    background: $primary-color;
+    z-index: 1;
+    display: none;
+  }
+
+  .region:hover::before {
+    animation: border-rotate 3s linear infinite;
+  }
+
+  @keyframes border-rotate {
+    from {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .region::after {
+    position: absolute;
+    content: "";
+    inset: 2px;
+    background: #161616;
+    mask-image: linear-gradient(135deg, transparent 15px, #000 0);
+    z-index: 2;
+    display: none;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
+    mask-image: linear-gradient(135deg, transparent 15px, #000 0);
+    animation: overlay 0.5s linear;
+    display: none;
+
+    @keyframes overlay {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-info {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 50px;
+    font-family: $darker-grotesque;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(#dcdcdc, 0.2);
+    z-index: 100;
+
+    .name {
+      text-transform: capitalize;
+      margin-top: -3px;
+      font-size: 18px;
+      font-weight: 500;
+      margin-right: 15px;
+    }
+
+    .description {
+      text-transform: lowercase;
+      padding-top: 0px;
+      font-size: 14px;
+      color: #8a8a8a;
+    }
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    mask-image: linear-gradient(135deg, transparent 15px, #000 0);
+    z-index: 99;
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(135deg, transparent 15px, #000 0);
+    z-index: 99;
+  }
+}
+
+.region-card:hover .image-container {
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+}
+
+.region-card:hover .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.region-card:hover .overlay {
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  display: flex;
+}
+
+@media screen and (max-width: 1240px) {
+  .region-card {
+    .card-info {
+      height: 1.5rem;
+
+      .name {
+        font-size: 0.6rem;
+        margin-right: 10px;
+      }
+
+      .description {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .region-card {
+    .card-info {
+      height: 3rem;
+
+      .name {
+        font-size: 1rem;
+        margin-right: 15px;
+      }
+
+      .description {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .region-card {
+    .card-info {
+      height: 3rem;
+
+      .name {
+        font-size: 0.9rem;
+        margin-right: 10px;
+      }
+
+      .description {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../styles/common/root.scss";
+
+//   header wrapper
+
+.homepage-header {
+  background-color: $header-bg; /* Change this to the color you want for the homepage header */
+
+  .nav-link {
+    color: $text-color;
+  }
+}
+
+.otherpage-header {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 84px;
+  background-color: $other-header; /* Change this to the color you want for other page headers */
+
+  .nav-link {
+    color: #fff;
+  }
+
+  .mobile-menu .dropdown .dropdown-toggle {
+    color: #fff;
+  }
+
+  // Simplify the selector to target the icon directly
+  .ic--round-dashboard {
+    color: #fff !important; // Use !important to override any other styles
+  }
+}
+
+.header_nav {
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style: none;
+    padding-left: 30px;
+    font-size: 16px;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+
+    .nav-link.active {
+      color: $primary-color;
+    }
+
+    .nav-link:hover {
+      color: $primary-color;
+    }
+  }
+}

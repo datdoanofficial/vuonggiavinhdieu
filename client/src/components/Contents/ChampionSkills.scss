@@ -1,0 +1,246 @@
+@import "../../styles/common/root.scss";
+
+.all-skills {
+  width: calc(100% - 200px);
+  height: fit-content;
+  color: $text-color;
+  margin-top: 70px;
+
+  .skills-title {
+    font-size: 26px;
+    color: $text-color;
+    font-family: $quicksand;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .skills-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    .line-skills {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100px;
+      z-index: 1;
+
+      .skills {
+        transform: translateX(50px);
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        height: 100px;
+        cursor: pointer;
+        z-index: 1;
+
+        img {
+          margin-top: 20px;
+          width: 100%;
+          border-radius: 50px;
+          transition: 0.5s;
+        }
+
+        .circle {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #dcdcdc;
+          border-radius: 50%;
+          bottom: 5.5px;
+
+          .line {
+            position: absolute;
+            width: 1px;
+            height: 17px;
+            background: $primary-color;
+            bottom: 13px;
+            z-index: 0;
+            display: none;
+            animation: outline-circle 0.5s linear;
+          }
+
+          @keyframes outline-circle {
+            0% {
+              height: 0;
+            }
+            100% {
+              height: 17px;
+            }
+          }
+        }
+      }
+
+      .skills:hover img {
+        outline: 1px solid $primary-color;
+        outline-offset: 3px;
+        margin-top: 0px;
+      }
+
+      .skills:hover .circle {
+        outline: 1px solid $primary-color;
+        outline-offset: 3px;
+        background: $primary-color;
+      }
+
+      .skills:hover .circle .line {
+        display: block;
+      }
+
+      // skills active
+
+      .skills.active img {
+        outline: 1px solid $primary-color;
+        outline-offset: 3px;
+        margin-top: 0px;
+      }
+
+      .skills.active .circle {
+        outline: 1px solid $primary-color;
+        outline-offset: 3px;
+        background: $primary-color;
+      }
+
+      .skills.active .circle .line {
+        display: block;
+      }
+
+      .line {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #dcdcdc;
+        bottom: 10px;
+        animation: line-animate 1s linear;
+        z-index: 0;
+      }
+
+      @keyframes line-animate {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .featured-skills {
+    font-family: $quicksand;
+    margin-top: 20px;
+    display: none;
+
+    .heading {
+      position: relative;
+      display: grid;
+      width: 93%;
+      grid-template-columns: 1fr 1fr;
+
+      .skills-name {
+        font-weight: 600;
+        text-transform: capitalize;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      .countdown-and-mana {
+        position: absolute;
+        right: 0;
+        display: flex;
+
+        .countdown span {
+          font-weight: 500;
+          color: #5eaf8c;
+        }
+
+        .mana {
+          margin-left: 30px;
+
+          span {
+            font-weight: 500;
+            color: #4286f5;
+          }
+        }
+      }
+    }
+
+    .skills-item-content-text {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: justify;
+      max-width: 93%;
+      line-height: 24px;
+
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .featured-skills.active {
+    display: block;
+  }
+
+  .skills-introduction {
+    position: relative;
+
+    .frame {
+      position: relative;
+      width: 550px;
+      height: 350px;
+      z-index: 1;
+      animation-delay: 1s;
+      animation: frame-animate 1s linear;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @keyframes frame-animate {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .skills-video {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 10px;
+      left: -10px;
+      width: 570px;
+      height: 320px;
+
+      .play-btn {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-image: url("../../assets/images/icons/play-btn.png");
+        background-size: cover;
+        cursor: pointer;
+        opacity: 0.8;
+        z-index: 99;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,575 @@
+@import "../../styles/common/root.scss";
+
+// card animation
+.card-animation {
+  position: relative;
+  top: 0;
+  padding-top: 32px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  height: fit-content;
+  width: 45rem;
+  overflow: hidden;
+
+  // Add this block
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15); // White overlay with 50% opacity
+    filter: blur(1px);
+  }
+
+  // card
+  .card {
+    width: 225px;
+    height: 325px;
+    border-radius: 10px;
+  }
+
+  // fade out
+
+  .new-card.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+  .new-card1.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+  .new-card2.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+  .new-card3.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+  .new-card4.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+  }
+
+  // new card animate
+
+  @keyframes new-card {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // card 01 change new card
+
+  .card-01.new-card {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-01.new-card1 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-02.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-01.new-card2 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-03.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-01.new-card3 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-04.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-01.new-card4 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-05.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-01.new-card5 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-06.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 01
+
+  .card-01 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-01-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-01.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  // card 02 change new card
+
+  .card-02.new-card {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-02-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-02.new-card1 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-02-02.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-02.new-card2 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-02-03.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-02.new-card3 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-02-04.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-02.new-card4 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-02-05.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-02.new-card5 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-02-06.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 02
+
+  .card-02 {
+    opacity: 1;
+    margin-top: 70px;
+    background-image: url(../../assets/images/cards/card-02-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-02.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  // card 03 change new card
+  .card-03.new-card {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-03-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-03.new-card1 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-03-02.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-03.new-card2 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-03-03.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-03.new-card3 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-03-04.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-03.new-card4 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-03-05.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-03.new-card5 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-03-06.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 03
+  .card-03 {
+    opacity: 1;
+    margin-top: 120px;
+    background-image: url(../../assets/images/cards/card-03-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // fade out
+  .card-03.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  // card 04 change new card
+
+  .card-04.new-card {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-04-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-04.new-card1 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-04-02.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-04.new-card2 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-04-03.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-04.new-card3 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-04-04.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-04.new-card4 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-04-05.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-04.new-card5 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-04-06.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 04
+  .card-04 {
+    opacity: 1;
+    margin-top: 80px;
+    background-image: url(../../assets/images/cards/card-04-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 04 fade out
+  .card-04.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  // card 05 change new card
+
+  .card-05.new-card {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-05-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-05.new-card1 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-05-02.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-05.new-card2 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-05-03.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-05.new-card3 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-05-04.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-05.new-card4 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-05-05.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-05.new-card5 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-05-06.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 05
+  .card-05 {
+    opacity: 1;
+    margin-top: 30px;
+    background-image: url(../../assets/images/cards/card-05-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 05 fade out
+  .card-05.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  // card 06 change new card
+
+  .card-06.new-card {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-06.new-card1 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-02.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-06.new-card2 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-03.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-06.new-card3 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-04.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-06.new-card4 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-05.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  .card-06.new-card5 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-06.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 06
+  .card-06 {
+    opacity: 1;
+    background-image: url(../../assets/images/cards/card-06-01.webp);
+    background-size: cover;
+    animation: new-card 0.5s ease;
+  }
+
+  // card 06 fade out
+  .card-06.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .card-animation {
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 49px;
+
+    // card
+    .card {
+      width: 200px;
+      height: 289px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card-animation {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 35px;
+
+    // card
+    .card {
+      width: 210px;
+      height: 303px;
+    }
+
+    .card-06 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card-animation {
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 49px;
+
+    // card
+    .card {
+      width: 200px;
+      height: 289px;
+    }
+
+    .card-06 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-animation {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 29px;
+
+    // card
+    .card {
+      width: 200px;
+      height: 289px;
+    }
+
+    .card-01 {
+      display: none;
+    }
+
+    .card-06 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-animation {
+    bottom: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 0px;
+
+    // card
+    .card {
+      width: 200px;
+      height: 289px;
+    }
+
+    .card-01,
+    .card-05,
+    .card-06 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-animation {
+    bottom: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: -20px;
+
+    // card
+    .card {
+      width: 200px;
+      height: 289px;
+    }
+
+    .card-01,
+    .card-05,
+    .card-06 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card-animation {
+    bottom: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: -15px;
+
+    // card
+    .card {
+      width: 170px;
+      height: 246px;
+    }
+
+    .card-01,
+    .card-05,
+    .card-06 {
+      display: none;
+    }
+  }
+}

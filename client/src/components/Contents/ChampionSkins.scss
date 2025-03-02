@@ -1,0 +1,131 @@
+@import "../../styles/common/root.scss";
+
+.all-skins {
+  margin-top: 70px;
+  width: calc(100% - 200px);
+  height: fit-content;
+
+  .heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .skins-title {
+      font-size: 26px;
+      color: $text-color;
+      font-family: $quicksand;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+
+    .navigation {
+      width: 90px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .chevron {
+        height: 100%;
+        cursor: pointer;
+      }
+
+      .dot {
+        height: 60%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .skins-item {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    margin-top: 50px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+
+    .skins-item-inner {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 5px;
+
+      .banner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 100%;
+        transition: 0.5s all;
+        background-color: #5a5a5a;
+        cursor: pointer;
+
+        .banner-content {
+          font-family: $quicksand;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 20%;
+          width: calc(100% - 10px);
+          transition: 0.5s all;
+          height: 80%;
+          border-left: 0.3px solid $hover-color;
+          border-right: 0.3px solid $hover-color;
+
+          .num {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 500;
+            color: $hover-color;
+            width: 40%;
+            height: 50px;
+            border-bottom: 1px solid $hover-color;
+          }
+
+          .skin-name {
+            margin-top: 20px;
+            font-family: $darker-grotesque;
+            color: $hover-color;
+            font-size: 26px;
+            max-width: 50%;
+            line-height: 40px;
+            text-align: center;
+          }
+        }
+      }
+
+      .skins-item-image {
+        width: 780px;
+        height: 100%;
+        margin-right: 5px;
+        display: none;
+        transition: 0.5s all;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .skins-item-inner.active .skins-item-image {
+      display: block;
+      animation: slideInLeftToRight 0.5s ease-out forwards;
+    }
+
+    @keyframes slideInLeftToRight {
+      from {
+        width: 0;
+        opacity: 0;
+      }
+      to {
+        width: 780px;
+        opacity: 1;
+      }
+    }
+  }
+}

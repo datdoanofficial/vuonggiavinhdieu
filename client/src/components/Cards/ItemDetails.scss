@@ -1,0 +1,54 @@
+@import "../../styles/common/root.scss";
+
+// add class onScroll
+.item-details.onScroll {
+  position: fixed;
+  width: calc((100% - 6rem) * 0.26);
+  right: 100px;
+  top: 30px;
+}
+
+.item-details {
+  width: 100%;
+  height: fit-content;
+  font-family: $quicksand;
+  color: $text-color;
+  overflow: scroll;
+  padding: 20px 25px 30px 25px;
+  background-color: rgba(#f2f2f2, 0.5);
+  border-radius: 10px;
+
+  .item-name {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    border-bottom: 2px solid rgba(#e2e2e2, 0.4);
+  }
+
+  .item-stats {
+    font-size: 18px;
+    margin-top: 20px;
+
+    .line {
+      margin-top: 10px;
+    }
+  }
+
+  .item-passive {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 24px;
+
+    .line {
+      margin-top: 20px;
+    }
+  }
+
+  .item-story {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #8a8a8a;
+    text-align: justify;
+  }
+}

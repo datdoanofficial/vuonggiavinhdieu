@@ -1,0 +1,324 @@
+@import "../../styles/common/root.scss";
+
+// iconify
+
+.mingcute--copper-coin-fill {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 5px;
+  color: #f1b32b;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23000' d='M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m-.707 6.464l-2.829 2.829a1 1 0 0 0 0 1.414l2.829 2.829a1 1 0 0 0 1.414 0l2.829-2.829a1 1 0 0 0 0-1.414l-2.829-2.829a1 1 0 0 0-1.414 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.items {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  font-family: $quicksand;
+  color: $text-color;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .itemImg {
+    margin-right: 20px;
+    width: 77px;
+    height: 77px;
+    outline: 2px solid rgba($text-color, 0.5);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .itemImg:hover {
+    outline: 2px solid $primary-color;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .item-name {
+    margin-top: 2px;
+    font-size: 0.45rem;
+    font-weight: 500;
+  }
+
+  .item-price {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $quicksand;
+    display: flex;
+    align-items: center;
+  }
+
+  .item-sell {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $quicksand;
+    display: flex;
+    align-items: center;
+
+    .mingcute--copper-coin-fill {
+      color: #ed712e;
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .items {
+    .itemImg {
+      margin-right: 15px;
+      width: 77px;
+      height: 77px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 13px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .items {
+    height: 77px;
+
+    .itemImg {
+      width: 77px;
+      height: 77px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .items {
+    .itemImg {
+      width: 67px;
+      height: 67px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 13px;
+    }
+
+    .item-price {
+      margin-top: 5px;
+      font-size: 13px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    height: 70px;
+
+    .itemImg {
+      width: 70px;
+      height: 70px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 15px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .items {
+    height: 67px;
+
+    .itemImg {
+      width: 67px;
+      height: 67px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 12px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .items {
+    height: fit-content;
+    background-color: rgba(242, 242, 242, 0.5);
+    // background-color: #ddd;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .itemImg {
+      margin-right: 25px;
+      width: 87px;
+      height: 87px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 18px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .items {
+    .itemImg {
+      margin-right: 20px;
+      width: 77px;
+      height: 77px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 16px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .items {
+    .itemImg {
+      margin-right: 20px;
+      width: 77px;
+      height: 77px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .items {
+    .itemImg {
+      margin-right: 20px;
+      width: 67px;
+      height: 67px;
+    }
+
+    .item-name {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+
+    .item-price {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .item-sell {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  }
+}

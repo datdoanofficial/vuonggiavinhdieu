@@ -1,0 +1,21 @@
+@import "../../styles/common/root.scss";
+
+.login {
+  height: 40px;
+  width: 120px;
+  text-decoration: none;
+  color: #333;
+  font-family: $quicksand;
+  font-weight: 500;
+  background-color: $primary-color;
+  border-radius: 50px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.login:hover {
+  background-color: $hover-color;
+}
