@@ -422,3 +422,19 @@
     width: calc(100% - 2rem);
   }
 }
+
+// Add specific iOS fixes
+@supports (-webkit-touch-callout: none) {
+  .filter-items {
+    .searchFilter,
+    .item-type-dropdown,
+    .sort {
+      transform: translateZ(0); // Force GPU acceleration
+    }
+
+    input,
+    button {
+      font-size: 16px; // Prevent zoom on iOS
+    }
+  }
+}
