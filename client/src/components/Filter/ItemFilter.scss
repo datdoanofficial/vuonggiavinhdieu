@@ -32,6 +32,7 @@
     align-items: center;
     border-right: 1px solid #ddd;
     z-index: 1;
+    border-radius: 0;
 
     span {
       width: 22px;
@@ -54,6 +55,7 @@
       color: $text-color;
       border: none;
       outline: none;
+      border-radius: 0;
     }
 
     input::placeholder {
@@ -216,12 +218,14 @@
       height: 70%; // Adjust this value to control border height
       width: 1px;
       background-color: #ddd;
+      border-radius: 0;
     }
 
     .dropdown {
       position: absolute;
       width: 100%;
       height: 100%;
+      -webkit-tap-highlight-color: transparent; // Remove tap highlight on iOS
     }
 
     .dropdown button {
@@ -416,6 +420,7 @@
     .item-type-dropdown,
     .sort {
       grid-row: 2; // Place in second row
+      height: 50px;
     }
 
     .sort {
