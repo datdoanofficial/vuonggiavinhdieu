@@ -67,8 +67,19 @@
   }
 
   .skin-type-dropdown {
+    position: relative;
+    right: 0;
     width: 100%;
     height: 100%;
+    font-family: $quicksand;
+    font-weight: 500;
+    color: $text-color;
+    display: flex;
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 
     .dropdown {
       position: relative;
@@ -111,6 +122,7 @@
         top: 100%;
         left: 0;
         width: 100%;
+        color: $text-color;
         background: white;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         margin-top: 4px;
@@ -208,7 +220,6 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-    border-radius: 0;
 
     // Add pseudo-element for inner border
     &::before {
@@ -220,6 +231,7 @@
       height: 70%; // Adjust this value to control border height
       width: 1px;
       background-color: #ddd;
+      border-radius: 0;
     }
 
     .dropdown {
@@ -243,7 +255,6 @@
       border: none;
       cursor: pointer;
       font-family: $quicksand;
-      border-radius: 0;
     }
 
     .dropdown-menu {
@@ -422,6 +433,7 @@
     .skin-type-dropdown,
     .sort {
       grid-row: 2; // Place in second row
+      height: 50px;
     }
 
     .sort {
