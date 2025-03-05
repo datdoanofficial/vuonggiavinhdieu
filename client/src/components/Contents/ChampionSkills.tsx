@@ -18,35 +18,42 @@ const ChampionSkills = (props: Props) => {
       <div className="skills-content">
         {/* skills item */}
         <div className="skills-item">
-          <div className="skills-item-content">
-            <div className="line-skills">
-              <div className="passive skills">
-                <img src={passive} alt="" />
-                <div className="circle">
-                  <div className="line"></div>
-                </div>
+          {/* line skills */}
+          <div className="line-skills">
+            <div className="passive skills">
+              <img src={passive} alt="" />
+              <div className="circle">
+                <div className="line"></div>
               </div>
-              <div className="skills-01 skills">
-                <img src={skills1} alt="" />
-                <div className="circle">
-                  <div className="line"></div>
-                </div>
-              </div>
-              <div className="skills-02 skills active">
-                <img src={skills2} alt="" />
-                <div className="circle">
-                  <div className="line"></div>
-                </div>
-              </div>
-              <div className="skills-03 skills">
-                <img src={skills3} alt="" />
-                <div className="circle">
-                  <div className="line"></div>
-                </div>
-              </div>
-              <div className="skills-04 skills"></div>
-              <div className="line"></div>
             </div>
+            <div className="skills-01 skills">
+              <img src={skills1} alt="" />
+              <div className="circle">
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="skills-02 skills active">
+              <img src={skills2} alt="" />
+              <div className="circle">
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="skills-03 skills">
+              <img src={skills3} alt="" />
+              <div className="circle">
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="skills-04 skills">
+              <img src={skills3} alt="" />
+              <div className="circle">
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="line"></div>
+          </div>
+          {/* skills item */}
+          <div className="skills-item-content">
             <div className="featured-skills content-passive">
               <div className="heading">
                 <div className="skills-name">
@@ -147,18 +154,31 @@ const ChampionSkills = (props: Props) => {
             <div className="featured-skills content-skills-04">
               <div className="heading">
                 <div className="skills-name">
-                  <span></span>
+                  <span>Ngưng Ngọc Chi Ấn</span>
                 </div>
                 <div className="countdown-and-mana">
                   <div className="countdown">
-                    <span></span>
+                    <span>Hồi chiêu: </span>25/22.5/20
                   </div>
                   <div className="mana">
-                    <span></span>
+                    <span>Năng lượng: </span>100
                   </div>
                 </div>
               </div>
-              <div className="skills-item-content-text"></div>
+              <div className="skills-item-content-text">
+                Phi vung ngọc nhận quét ngang, gây 270/405/540 (+65% công vật lý
+                cộng thêm) sát thương vật lý, đồng thời đánh dấu tất cả mục tiêu
+                bằng linh ngọc. Sau khi sử dụng, kích hoạt{" "}
+                <span>ngưng ngọc chi kích</span>, Phi thu đao vào vỏ, đồng thời
+                đánh dấu vỡ vụn, chém mỗi mục tiêu bốn lần, và nhận được tầm
+                nhìn của mục tiêu. Ba đoạn đầu mỗi đoạn gây 140/210/280 (+35%
+                công vật lý cộng thêm) sát thương vật lý và hồi 60/90/120 (+1%
+                máu cộng thêm) máu, đoạn thứ tư gây gấp đôi sát thương và hồi
+                máu. Máu của Phi càng thấp, hồi máu càng cao, tối đa gấp 2 lần
+                giá trị cơ bản. Khi máu của mục tiêu giảm xuống còn 14%, đòn
+                chém cuối cùng chắc chắn sẽ hạ gục mục tiêu. Sử dụng{" "}
+                <span>ngưng ngọc chi ấn</span> trên tường có thể xuống tường.
+              </div>
             </div>
           </div>
         </div>

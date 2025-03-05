@@ -2,7 +2,7 @@
 
 .champions-name {
   position: relative;
-  margin-top: -80px;
+  margin-top: -4rem;
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -56,8 +56,8 @@
 }
 
 .hrline {
-  width: calc(100% - 200px);
-  margin-top: 40px;
+  width: calc(100% - 6rem);
+  margin-top: 1.2rem;
 }
 
 .introduction {
@@ -65,9 +65,9 @@
   color: $text-color;
   text-align: justify;
   line-height: 26px;
-  margin-top: 30px;
+  margin-top: 1.2rem;
   font-family: $quicksand;
-  width: calc(100% - 200px);
+  width: calc(100% - 6rem);
 }
 
 .see-more-btn {
@@ -82,4 +82,64 @@
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1240px) {
+  .introduction {
+    width: calc(100% - 4rem);
+  }
+
+  .hrline {
+    width: calc(100% - 4rem);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction {
+    width: calc(100% - 3rem);
+  }
+
+  .hrline {
+    width: calc(100% - 3rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .champions-name {
+    font-size: 70px;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .title {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .champions-name {
+    font-size: 60px;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .title {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 14px;
+  }
 }

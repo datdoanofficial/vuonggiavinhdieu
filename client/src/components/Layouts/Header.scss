@@ -178,7 +178,6 @@
               font-family: $quicksand;
               font-weight: 500;
               height: 60px;
-              padding: 0 20px;
               transition: background-color 0.2s ease;
               border-radius: 5px;
               display: flex;
@@ -190,11 +189,17 @@
               }
 
               &.active {
-                color: $primary-color;
-                background-color: #f8f9fa;
+                background-color: #e2e2e2;
+
+                a {
+                  color: $text-color;
+                }
               }
 
               a {
+                padding: 0 20px;
+                width: 100%;
+                height: 100%;
                 font-size: 16px;
                 display: flex;
                 color: #333;

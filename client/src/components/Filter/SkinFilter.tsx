@@ -103,7 +103,11 @@ const SkinFilter = (props: Props) => {
           {isOpen && (
             <ul className="dropdown-menu">
               {options.map((option) => (
-                <li key={option} onClick={() => handleOptionClick(option)}>
+                <li
+                  key={option}
+                  className={selectedOption === option ? "active" : ""}
+                  onClick={() => handleOptionClick(option)}
+                >
                   {option}
                 </li>
               ))}

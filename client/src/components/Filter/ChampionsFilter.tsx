@@ -116,12 +116,15 @@ const ChampionsFilter = (props: Props) => {
       )}
       <div className="sort">
         <div className="dropdown">
-          <button onClick={() => setIsOpen(!isOpen)}>{selectedOption}</button>{" "}
-          {/* Display the selected value */}
+          <button onClick={() => setIsOpen(!isOpen)}>{selectedOption}</button>
           {isOpen && (
             <ul className="dropdown-menu">
               {options.map((option) => (
-                <li key={option} onClick={() => handleOptionClick(option)}>
+                <li
+                  key={option}
+                  className={selectedOption === option ? "active" : ""}
+                  onClick={() => handleOptionClick(option)}
+                >
                   {option}
                 </li>
               ))}

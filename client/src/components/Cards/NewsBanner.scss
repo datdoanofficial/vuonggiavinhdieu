@@ -118,6 +118,10 @@
         .mini-banner-item {
           height: 136px;
         }
+
+        .text-in-banner {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -186,6 +190,12 @@
           height: 100%;
           aspect-ratio: 1.765;
         }
+
+        .text-in-banner {
+          bottom: 50px;
+          font-size: 18px;
+          height: 40px;
+        }
       }
     }
   }
@@ -194,6 +204,32 @@
 @media screen and (max-width: 768px) {
   .news-wrapper {
     width: calc(100% - 4rem);
+
+    .all-banner {
+      .mini-banner {
+        .text-in-banner {
+          bottom: 46px;
+          font-size: 15px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .news-wrapper {
+    width: calc(100% - 4rem);
+
+    .all-banner {
+      .mini-banner {
+        .text-in-banner {
+          bottom: 40px;
+          font-size: 14px;
+          height: 30px;
+        }
+      }
+    }
   }
 }
 
@@ -205,6 +241,12 @@
       .mini-banner {
         margin-top: 15px;
         gap: 15px;
+
+        .text-in-banner {
+          bottom: 36px;
+          font-size: 12px;
+          height: 32px;
+        }
       }
     }
   }
@@ -226,6 +268,34 @@
         grid-template-columns: repeat(1, 1fr);
         margin-top: 20px;
         gap: 20px;
+
+        .text-in-banner {
+          height: 50px;
+          bottom: 56px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .news-wrapper {
+    width: calc(100% - 4rem);
+
+    .all-banner {
+      .large-banner {
+        .text-in-banner {
+          height: 48px;
+          font-size: 18px;
+        }
+      }
+      .mini-banner {
+        .text-in-banner {
+          height: 50px;
+          bottom: 54px;
+          font-size: 18px;
+        }
       }
     }
   }
@@ -234,5 +304,21 @@
 @media screen and (max-width: 375px) {
   .news-wrapper {
     width: calc(100% - 2rem);
+
+    .all-banner {
+      .large-banner {
+        .text-in-banner {
+          font-size: 16px;
+          height: 42px;
+        }
+      }
+      .mini-banner {
+        .text-in-banner {
+          height: 40px;
+          bottom: 46px;
+          font-size: 16px;
+        }
+      }
+    }
   }
 }

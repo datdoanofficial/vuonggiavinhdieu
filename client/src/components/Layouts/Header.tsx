@@ -52,55 +52,52 @@ const Header = (props: Props) => {
                   <span className="material-symbols--login-rounded icon"></span>
                   Đăng Nhập
                 </Link>
+                {/* menu links */}
                 <ul className="menu-links">
-                  <li>
-                    <a href="/">
-                      <div className="icon">
-                        <span className="mingcute--home-3-line"></span>
-                      </div>
-                      Trang Chủ
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/champions">
-                      <div className="icon">
-                        <span className="game-icons--kenku-head"></span>
-                      </div>
-                      Tướng
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/skin">
-                      <div className="icon">
-                        <span className="majesticons--t-shirt-line"></span>
-                      </div>
-                      Trang Phục
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/item">
-                      <div className="icon">
-                        <span className="ph--sword-fill"></span>
-                      </div>
-                      Trang Bị
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/region">
-                      <div className="icon">
-                        <span className="basil--location-solid"></span>
-                      </div>
-                      Khu Vực
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/news">
-                      <div className="icon">
-                        <span className="material-symbols--breaking-news-alt-1-outline-rounded"></span>
-                      </div>
-                      Tin Tức
-                    </a>
-                  </li>
+                  {[
+                    {
+                      path: "/",
+                      icon: "mingcute--home-3-line",
+                      label: "Trang Chủ",
+                    },
+                    {
+                      path: "/champions",
+                      icon: "game-icons--kenku-head",
+                      label: "Tướng",
+                    },
+                    {
+                      path: "/skin",
+                      icon: "majesticons--t-shirt-line",
+                      label: "Trang Phục",
+                    },
+                    {
+                      path: "/item",
+                      icon: "ph--sword-fill",
+                      label: "Trang Bị",
+                    },
+                    {
+                      path: "/region",
+                      icon: "basil--location-solid",
+                      label: "Khu Vực",
+                    },
+                    {
+                      path: "/news",
+                      icon: "material-symbols--breaking-news-alt-1-outline-rounded",
+                      label: "Tin Tức",
+                    },
+                  ].map(({ path, icon, label }) => (
+                    <li
+                      key={path}
+                      className={activePage === path ? "active" : ""}
+                    >
+                      <Link to={path}>
+                        <div className="icon">
+                          <span className={icon}></span>
+                        </div>
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}

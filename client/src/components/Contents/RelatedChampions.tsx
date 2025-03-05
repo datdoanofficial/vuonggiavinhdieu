@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // import Link
 import "./RelatedChampions.scss";
 
@@ -11,23 +11,57 @@ import championsThumb from "../../assets/images/champions/champions.webp";
 type Props = {};
 
 const RelatedChampions = (props: Props) => {
-  const totalSkins = 8; // Assuming 5 or more skins
-  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 4 }); // State to track visible range
-  const [activeSkinIndex, setActiveSkinIndex] = useState(0); // Initialize with 0
+  const totalSkins = 8;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [visibleRange, setVisibleRange] = useState({
+    start: 0,
+    end:
+      windowWidth <= 375
+        ? 1
+        : windowWidth <= 576
+        ? 2
+        : windowWidth <= 768
+        ? 3
+        : 4,
+  });
+  const [activeSkinIndex, setActiveSkinIndex] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setWindowWidth(width);
+      setVisibleRange((prev) => ({
+        start: prev.start,
+        end:
+          width <= 375
+            ? Math.min(prev.start + 1, totalSkins - 1)
+            : width <= 576
+            ? Math.min(prev.start + 2, totalSkins - 1)
+            : width <= 768
+            ? Math.min(prev.start + 3, totalSkins - 1)
+            : Math.min(prev.start + 4, totalSkins - 1),
+      }));
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [totalSkins]);
 
   const handleRightChevronClick = () => {
     if (visibleRange.end < totalSkins) {
       setVisibleRange((prevRange) => {
         const newStart = prevRange.start + 1;
-        const newEnd = prevRange.end + 1;
+        const newEnd =
+          windowWidth <= 375
+            ? Math.min(newStart + 1, totalSkins)
+            : windowWidth <= 576
+            ? Math.min(newStart + 2, totalSkins)
+            : windowWidth <= 768
+            ? Math.min(newStart + 3, totalSkins)
+            : Math.min(newStart + 4, totalSkins);
 
-        // Always set activeSkinIndex to 0 (the first skin)
-        setActiveSkinIndex(0); // Thay đổi ở đây
-
-        return {
-          start: newStart,
-          end: newEnd,
-        };
+        setActiveSkinIndex(0);
+        return { start: newStart, end: newEnd };
       });
     }
   };
@@ -36,18 +70,21 @@ const RelatedChampions = (props: Props) => {
     if (visibleRange.start > 0) {
       setVisibleRange((prevRange) => {
         const newStart = prevRange.start - 1;
-        const newEnd = prevRange.end - 1;
+        const newEnd =
+          windowWidth <= 375
+            ? newStart + 1
+            : windowWidth <= 576
+            ? newStart + 2
+            : windowWidth <= 768
+            ? newStart + 3
+            : newStart + 4;
 
-        // Always set activeSkinIndex to 0 (the first skin)
-        setActiveSkinIndex(0); // Thay đổi ở đây
-
-        return {
-          start: newStart,
-          end: newEnd,
-        };
+        setActiveSkinIndex(0);
+        return { start: newStart, end: newEnd };
       });
     }
   };
+
   return (
     <div className="related-champions">
       <div className="heading">

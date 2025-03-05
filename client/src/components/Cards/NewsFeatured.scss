@@ -65,7 +65,6 @@
       bottom: 0;
       margin-left: 25px;
       margin-bottom: 18px;
-
       align-items: center;
       flex-direction: column;
     }
@@ -115,17 +114,62 @@
   .featured {
     width: 1131px;
   }
+
+  .news-featured {
+    .featured-item {
+      .inner-text {
+        margin-bottom: 16px;
+      }
+      .title {
+        font-size: 16px;
+      }
+
+      .read-more {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .featured {
     width: 1045px;
   }
+
+  .news-featured {
+    .featured-item {
+      .inner-text {
+        margin-bottom: 14px;
+      }
+      .title {
+        font-size: 15px;
+      }
+
+      .read-more {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1100px) {
   .featured {
     width: 978px;
+  }
+
+  .news-featured {
+    .featured-item {
+      .inner-text {
+        margin-bottom: 14px;
+      }
+      .title {
+        font-size: 14px;
+      }
+
+      .read-more {
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -140,6 +184,41 @@
 
     .featured-item {
       aspect-ratio: 1 / 0.9;
+
+      .inner-text {
+        margin-bottom: 5%;
+      }
+
+      .title {
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .read-more {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .news-featured {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .featured-item {
+      .inner-text {
+        margin-bottom: 5%;
+      }
+
+      .title {
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .read-more {
+        font-size: 0.6rem;
+      }
     }
   }
 }
@@ -151,6 +230,21 @@
 
   .news-featured {
     gap: 1rem;
+
+    .featured-item {
+      .inner-text {
+        margin-bottom: 4%;
+      }
+
+      .title {
+        font-size: 0.6rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .read-more {
+        font-size: 0.55rem;
+      }
+    }
   }
 }
 
@@ -161,7 +255,20 @@
 
   .news-featured {
     .featured-item {
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1 / 0.95;
+
+      .inner-text {
+        margin-bottom: 5%;
+      }
+
+      .title {
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .read-more {
+        font-size: 0.65rem;
+      }
     }
   }
 }
@@ -178,6 +285,19 @@
 
     .featured-item {
       aspect-ratio: 1 / 0.9;
+
+      .inner-text {
+        margin-bottom: 5%;
+      }
+
+      .title {
+        font-size: 0.85rem;
+        margin-bottom: 8%;
+      }
+
+      .read-more {
+        font-size: 0.75rem;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 @import "../../styles/common/root.scss";
 
 .all-skills {
-  width: calc(100% - 200px);
+  width: calc(100% - 6rem);
   height: fit-content;
   color: $text-color;
   margin-top: 70px;
@@ -140,12 +140,14 @@
 
     .heading {
       position: relative;
-      display: grid;
+      display: flex;
+      flex-direction: column;
       width: 93%;
-      grid-template-columns: 1fr 1fr;
 
       .skills-name {
+        font-size: 18px;
         font-weight: 600;
+        margin-bottom: 20px;
         text-transform: capitalize;
 
         span {
@@ -154,8 +156,7 @@
       }
 
       .countdown-and-mana {
-        position: absolute;
-        right: 0;
+        font-size: 16px;
         display: flex;
 
         .countdown span {
@@ -164,7 +165,7 @@
         }
 
         .mana {
-          margin-left: 30px;
+          margin-left: 60px;
 
           span {
             font-weight: 500;
@@ -196,8 +197,7 @@
 
     .frame {
       position: relative;
-      width: 550px;
-      height: 350px;
+      width: 16.5rem;
       z-index: 1;
       animation-delay: 1s;
       animation: frame-animate 1s linear;
@@ -221,10 +221,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      top: 10px;
-      left: -10px;
-      width: 570px;
-      height: 320px;
+      top: 0.3rem;
+      left: -0.3rem;
+      width: 17.1rem;
 
       .play-btn {
         position: absolute;
@@ -240,6 +239,452 @@
 
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .all-skills {
+    width: calc(100% - 4rem);
+
+    .skills-content {
+      .line-skills {
+        .skills {
+          transform: translateX(40px);
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .all-skills {
+    width: calc(100% - 3rem);
+
+    .skills-content {
+      grid-template-columns: 1.7fr 1fr;
+
+      .line-skills {
+        top: 0.6rem;
+      }
+    }
+
+    .featured-skills {
+      width: calc(100% + 15rem);
+      margin-top: 2.2rem;
+
+      .heading {
+        .skills-name {
+          font-size: 16px;
+        }
+        .countdown-and-mana {
+          font-size: 16px;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 15px;
+      }
+    }
+
+    .skills-introduction {
+      .frame {
+        width: 12.8rem;
+      }
+
+      .skills-video {
+        top: 0.3rem;
+        left: -0.3rem;
+        width: 13.3rem;
+
+        .play-btn {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .all-skills {
+    position: relative;
+
+    .skills-content {
+      grid-template-columns: 1.7fr 1fr;
+
+      .line-skills {
+        top: 0.3rem;
+
+        .skills {
+          transform: translateX(40px);
+          margin-right: 25px;
+        }
+      }
+    }
+
+    .featured-skills {
+      width: calc(100% + 13.5rem);
+      margin-top: 1.8rem;
+
+      .heading {
+        .skills-name {
+          font-size: 16px;
+        }
+        .countdown-and-mana {
+          font-size: 16px;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 15px;
+      }
+    }
+
+    .skills-introduction {
+      .frame {
+        width: 10.8rem;
+      }
+
+      .skills-video {
+        top: 0.2rem;
+        left: -0.2rem;
+        width: 11.2rem;
+
+        .play-btn {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .all-skills {
+    position: relative;
+
+    .skills-content {
+      grid-template-columns: 1.6fr 1fr;
+
+      .line-skills {
+        top: 0.3rem;
+
+        .skills {
+          width: 50px;
+          transform: translateX(0);
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .featured-skills {
+      width: calc(100% + 12.5rem);
+      margin-top: 1.8rem;
+
+      .heading {
+        .skills-name {
+          font-size: 16px;
+        }
+        .countdown-and-mana {
+          font-size: 16px;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .all-skills {
+    position: relative;
+
+    .skills-content {
+      grid-template-columns: 1.6fr 1fr;
+
+      .line-skills {
+        top: 0.3rem;
+
+        .skills {
+          width: 40px;
+          transform: translateX(0);
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .featured-skills {
+      width: calc(100% + 12.5rem);
+      margin-top: 1.8rem;
+
+      .heading {
+        .skills-name {
+          font-size: 16px;
+        }
+        .countdown-and-mana {
+          font-size: 16px;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .all-skills {
+    position: relative;
+
+    .skills-content {
+      display: flex;
+      flex-direction: column;
+
+      .line-skills {
+        top: 0.3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .skills {
+          width: 50px;
+          margin-right: 30px;
+        }
+
+        .skills-04 {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .featured-skills {
+      width: 100%;
+      margin-top: 1.8rem;
+
+      .heading {
+        width: 100%;
+
+        .skills-name {
+          font-size: 16px;
+        }
+        .countdown-and-mana {
+          font-size: 16px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 14px;
+        max-width: 100%;
+      }
+    }
+
+    .skills-introduction {
+      left: 0.5rem;
+      margin-top: 30px;
+
+      .frame {
+        width: 95.5%;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .skills-video {
+        top: 0.4rem;
+        left: -0.35rem;
+        width: 99%;
+
+        .play-btn {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .all-skills {
+    position: relative;
+
+    .skills-content {
+      display: flex;
+      flex-direction: column;
+
+      .line-skills {
+        top: 0.3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .skills {
+          width: 50px;
+          margin-right: 20px;
+        }
+
+        .skills-04 {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .featured-skills {
+      width: 100%;
+      margin-top: 1.8rem;
+
+      .heading {
+        .skills-name {
+          font-size: 16px;
+        }
+        .countdown-and-mana {
+          font-size: 16px;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 14px;
+        max-width: 100%;
+      }
+    }
+
+    .skills-introduction {
+      left: 0.5rem;
+      margin-top: 30px;
+
+      .frame {
+        width: 95.5%;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .skills-video {
+        top: 0.4rem;
+        left: -0.35rem;
+        width: 99%;
+
+        .play-btn {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .all-skills {
+    .skills-introduction {
+      .skills-video {
+        .play-btn {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .all-skills {
+    position: relative;
+
+    .skills-title {
+      font-size: 22px;
+    }
+
+    .skills-content {
+      display: flex;
+      flex-direction: column;
+
+      .line-skills {
+        top: 0.3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .skills {
+          width: 40px;
+          margin-right: 15px;
+        }
+
+        .skills-04 {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .featured-skills {
+      width: 100%;
+      margin-top: 1.8rem;
+
+      .heading {
+        width: 100%;
+        max-width: 100%;
+
+        .skills-name {
+          font-size: 14px;
+        }
+        .countdown-and-mana {
+          font-size: 14px;
+        }
+      }
+
+      .skills-item-content-text {
+        margin-top: 20px;
+        font-size: 14px;
+        max-width: 100%;
+      }
+    }
+
+    .skills-introduction {
+      left: 0.5rem;
+      margin-top: 30px;
+
+      .frame {
+        width: 95.5%;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .skills-video {
+        top: 0.4rem;
+        left: -0.35rem;
+        width: 99%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .all-skills {
+    .skills-introduction {
+      .skills-video {
+        .play-btn {
+          width: 56px;
+          height: 56px;
+        }
       }
     }
   }

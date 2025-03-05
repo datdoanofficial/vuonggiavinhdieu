@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "skills-01": ".content-skills-01",
       "skills-02": ".content-skills-02",
       "skills-03": ".content-skills-03",
+      "skills-04": ".content-skills-04",
     };
 
     // Check if the clicked element or any of its parents have a relevant class
@@ -14,14 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.target.closest(`.${skillClass}`)) {
         // Logic to remove and add 'active' class remains the same
         document
-          .querySelectorAll(".passive, .skills-01, .skills-02, .skills-03")
+          .querySelectorAll(
+            ".passive, .skills-01, .skills-02, .skills-03, .skills-04"
+          )
           .forEach((skill) => {
             skill.classList.remove("active");
           });
 
         document
           .querySelectorAll(
-            ".content-passive, .content-skills-01, .content-skills-02, .content-skills-03"
+            ".content-passive, .content-skills-01, .content-skills-02, .content-skills-03, .content-skills-04"
           )
           .forEach((content) => {
             content.classList.remove("active");
