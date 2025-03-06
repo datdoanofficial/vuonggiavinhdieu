@@ -3,6 +3,7 @@
 // html
 html {
   font-size: calc(0.75rem + 1.5vw);
+  background: #fff;
 
   /* Customize scrollbar for Webkit browsers (Chrome, Safari) */
   &::-webkit-scrollbar {
