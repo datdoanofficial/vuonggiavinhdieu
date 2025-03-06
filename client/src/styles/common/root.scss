@@ -34,9 +34,6 @@ body {
   height: 100%;
   overflow-x: hidden;
   background-color: #ffffff;
-  // Add padding for iOS safe areas
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 * {
