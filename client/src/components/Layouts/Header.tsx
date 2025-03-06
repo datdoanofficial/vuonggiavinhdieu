@@ -20,8 +20,14 @@ const Header = (props: Props) => {
 
   useEffect(() => {
     setActivePage(location.pathname);
+    setIsMenuOpen(false); // Close menu when route changes
     window.scrollTo(0, 0);
   }, [location]);
+
+  // Close menu on page load/reload
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, []);
 
   const headerClass =
     activePage === "/" ? "homepage-header" : "otherpage-header";

@@ -39,17 +39,6 @@ body {
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-.header-wrapper {
-  padding-top: max(10px, env(safe-area-inset-top));
-  padding-left: max(30px, env(safe-area-inset-left));
-  padding-right: max(30px, env(safe-area-inset-right));
-}
-
-// Add for bottom fixed elements
-.footer {
-  padding-bottom: max(30px, env(safe-area-inset-bottom));
-}
-
 * {
   margin: 0;
   padding: 0;
