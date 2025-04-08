@@ -44,12 +44,12 @@ const ChampionSkills = (props: Props) => {
                 <div className="line"></div>
               </div>
             </div>
-            <div className="skills-04 skills">
+            {/* <div className="skills-04 skills">
               <img src={skills3} alt="" />
               <div className="circle">
                 <div className="line"></div>
               </div>
-            </div>
+            </div> */}
             <div className="line"></div>
           </div>
           {/* skills item */}
@@ -151,7 +151,7 @@ const ChampionSkills = (props: Props) => {
                 <span>ngưng ngọc chi ấn</span> trên tường có thể xuống tường.
               </div>
             </div>
-            <div className="featured-skills content-skills-04">
+            {/* <div className="featured-skills content-skills-04">
               <div className="heading">
                 <div className="skills-name">
                   <span>Ngưng Ngọc Chi Ấn</span>
@@ -179,7 +179,7 @@ const ChampionSkills = (props: Props) => {
                 chém cuối cùng chắc chắn sẽ hạ gục mục tiêu. Sử dụng{" "}
                 <span>ngưng ngọc chi ấn</span> trên tường có thể xuống tường.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* skills video */}
